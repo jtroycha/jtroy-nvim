@@ -1,14 +1,5 @@
 -- init.lua
 
-vim.g.mapleader = ' ' -- Set <leader> to space
-vim.g.maplocalleader = ' ' -- Also set <localleader> to space (optional but good practice)
-
--- Basic Neovim settings for tabs
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-
 -- Load lazy.nvim itself and its bootstrap (from lua/config/lazy.lua)
 -- This file should handle the installation of lazy.nvim if it's not present
 -- and add it to the runtime path.
@@ -22,8 +13,12 @@ local plugins = {
     require("plugins.catppuccin"),
     require("plugins.telescope"),
     require("plugins.treesitter"),
+    require("plugins.neo-tree"),
+    require("plugins.lualine"),
     -- Add any other plugins you define in lua/plugins/ here
 }
+
+require('vim-options')
 
 -- Setup lazy.nvim with all your plugin specifications
 require('lazy').setup(plugins)
