@@ -1,0 +1,29 @@
+# Ignore compiled Lua files
+*.luac
+
+# Ignore swap files, backup files, and undo files
+*.swp
+*.swo
+*.bak
+backup/
+undo/
+view/
+shada/
+
+# Ignore lazy.nvim's plugin installation directory
+# This directory contains all the cloned plugins, which should not be
+# version controlled directly. lazy.nvim will re-install them.
+lazy/
+
+# Ignore lazy.nvim's lock file (often generated)
+# If you want to pin exact plugin versions, you might include this,
+# but for simplicity, it's often ignored.
+lazy-lock.json
+
+# Ignore LuaRocks specific files if any are generated directly in config
+.luarocks/
+luarocks-*.zip
+
+# Ignore any other temporary or log files
+log/
+tmp/
